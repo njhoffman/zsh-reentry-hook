@@ -6,7 +6,7 @@
 [[ -o interactive ]] || return #interactive only
 autoload -Uz add-zsh-hook || { print "can't add zsh hook!"; return }
 
-if stat --version &> /dev/null && [[ -n $(stat --version |& grep GNU) ]] ; then
+if stat --version &> /dev/null && [[ -n "$(stat --version |& grep GNU)" ]] ; then
 	reentry_hook_stat () {
 		stat -c '%h' .
 	}
@@ -20,6 +20,9 @@ fi
 reentry_hook() {
     if [[ `reentry_hook_stat` -eq 0 && -d "$PWD" ]]; then
         builtin cd .
+			elif [[ `reentry_hook_stat` -eq 0 && ! -d "$PWD" ]]; then
+				print -P "%F{red}Warning:%f Current directory '$PWD' has been removed and cannot be re-entered."
+				builtin cd "$HOME"
     fi
 }
 
