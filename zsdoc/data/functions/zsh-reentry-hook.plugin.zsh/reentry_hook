@@ -1,0 +1,6 @@
+ if [[ `reentry_hook_stat` -eq 0 && -d "$PWD" ]]; then
+     builtin cd .
+elif [[ `reentry_hook_stat` -eq 0 && ! -d "$PWD" ]]; then
+	print -P "%F{red}Warning:%f Current directory '$PWD' has been removed and cannot be re-entered."
+	builtin cd "$HOME"
+ fi

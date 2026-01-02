@@ -1,0 +1,79 @@
+zsh-reentry-hook.plugin.zsh(1)
+==============================
+:compat-mode!:
+
+NAME
+----
+zsh-reentry-hook.plugin.zsh - a shell script
+
+SYNOPSIS
+--------
+Documentation automatically generated with `zshelldoc'
+
+FUNCTIONS
+---------
+
+ reentry_hook_stat
+AUTOLOAD add-zsh-hook
+PREEXEC-HOOK reentry_hook
+
+DETAILS
+-------
+
+Script Body
+~~~~~~~~~~~
+
+Has 10 line(s). Calls functions:
+
+ Script-Body
+ `-- add-zsh-hook
+
+Uses feature(s): _autoload_, _stat_
+
+reentry_hook
+~~~~~~~~~~~~
+
+Has 6 line(s). *Is a preexec hook*. Doesn't call other functions.
+
+Not called by script or any function (may be e.g. a hook, a Zle widget, etc.).
+
+reentry_hook_stat
+~~~~~~~~~~~~~~~~~
+
+____
+ 
+ Assume that we are dealing with a BSD variant.
+ 	
+____
+
+Has 2 line(s). Doesn't call other functions.
+
+Uses feature(s): _stat_
+
+Not called by script or any function (may be e.g. a hook, a Zle widget, etc.).
+
+add-zsh-hook
+~~~~~~~~~~~~
+
+____
+ 
+ Add to HOOK the given FUNCTION.
+ HOOK is one of chpwd, precmd, preexec, periodic, zshaddhistory,
+ zshexit, zsh_directory_name (the _functions subscript is not required).
+ 
+ With -d, remove the function from the hook instead; delete the hook
+ variable if it is empty.
+ 
+ -D behaves like -d, but pattern characters are active in the
+ function name, so any matching function will be deleted from the hook.
+ 
+____
+
+Has 93 line(s). Doesn't call other functions.
+
+Uses feature(s): _autoload_, _getopts_
+
+Called by:
+
+ Script-Body
+

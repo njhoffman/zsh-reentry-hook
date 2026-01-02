@@ -1,0 +1,5 @@
+#!/usr/bin/env zsh
+# Plugin that re-enters working directory
+# if it has been removed and re-created.
+# http://github.com/RobSis/zsh-reentry-hook #interactive only
+	# Assume that we are dealing with a BSD variant.

@@ -1,0 +1,2 @@
+stat -c '%h' .
+stat -f '%l' .
